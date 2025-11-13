@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samir's Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    function toggleInfo() {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.style.display = section.style.display === "none" ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <h1>Samir Abdel Perez Carrillo</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Figure -->
+  <figure>
+    <img src="Picture2.png" alt="Samir's Photo" width="400">
+    <figcaption>Hello! This is my Web Page.</figcaption>
+  </figure>
+
+  <!-- Main Content -->
+  <main>
+    <button onclick="toggleInfo()">Toggle Sections</button>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Full Name: Samir Abdel Perez Carrillo</p>
+      <p>Birthdate: June 18th, 2001</p>
+      <p>Favorite Color: dark red</p>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Reading</li>
+        <li>Playing Soccer</li>
+        <li>Learning new skills</li>
+        <li>Listening to music</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section with Table -->
+<section id="projects">
+  <h2>Projects & Achievements</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Projects</th>
+        <th>Status</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ICE Project</td>
+        <td>Ongoing</td>
+        <td><a href="index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Apostle Spotlight</td>
+        <td>Completed</td>
+        <td><a href="apostle_spotlight\apostles.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Favorite Devotional</td>
+        <td>Completed</td>
+        <td><a href="favorite_devo/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Fonts Project</td>
+        <td>Completed</td>
+        <td><a href="fonts/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Gallery</td>
+        <td>Completed</td>
+        <td><a href="gallery/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Grid Flags</td>
+        <td>Completed</td>
+        <td><a href="grid_flags/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Halloween Page</td>
+        <td>Completed</td>
+        <td><a href="halloween/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Positioning Exercise</td>
+        <td>Completed</td>
+        <td><a href="positioning/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Prophet Card</td>
+        <td>Completed</td>
+        <td><a href="prophet_card/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Signup Form</td>
+        <td>Completed</td>
+        <td><a href="signup/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Images Project</td>
+        <td>Completed</td>
+        <td><a href="images/index.html" target="_blank">View</a></td>
+      </tr>
+      <tr>
+        <td>Styles Showcase</td>
+        <td>Completed</td>
+        <td><a href="styles/index.html" target="_blank">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+    <!-- Contact Section with Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Samir A. P. Carrillo | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

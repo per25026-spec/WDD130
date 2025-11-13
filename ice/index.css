@@ -1,0 +1,214 @@
+/* ------------------------- Global Styles ------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  width: 95%;
+  max-width: 1400px; /* wider body */
+  margin: 20px auto;
+  padding: 25px;
+  color: #dcd6e0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 20, 1) 0%,
+    rgba(20, 20, 35, 1) 70%,
+    rgba(60, 40, 80, 0.7) 85%,
+    rgba(100, 70, 110, 0.6) 92%,
+    rgba(150, 90, 140, 0.6) 97%,
+    rgba(200, 130, 190, 0.7) 100%
+  );
+  border: 2px solid rgba(200, 130, 190, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(200, 130, 190, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------------- Header ------------------------- */
+header {
+  background-color: rgba(25, 15, 35, 0.85);
+  color: #e8daef;
+  padding: 1em;
+  border-bottom: 1px solid rgba(200, 130, 190, 0.3);
+  box-shadow: 0 0 8px rgba(200, 130, 190, 0.2);
+  border-radius: 12px;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+  color: #ff00ff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 0.5em;
+}
+
+header nav a {
+  color: #e8daef;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px rgba(200, 130, 190, 0.4);
+}
+
+/* ------------------------- Figure / Hero ------------------------- */
+figure {
+  margin: 2rem 0;
+}
+
+figure img {
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(200, 130, 190, 0.4);
+}
+
+figure figcaption {
+  font-size: 0.9em;
+  color: #c882be;
+  margin-top: 0.5em;
+}
+
+/* ------------------------- Main / Sections ------------------------- */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1.5em;
+}
+
+section {
+  background-color: rgba(30, 20, 40, 0.6);
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(200, 130, 190, 0.2);
+  text-align: left;
+}
+
+section h2 {
+  color: #ff00ff;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------- Button ------------------------- */
+button {
+  background-color: rgba(230, 210, 240, 0.2);
+  color: #e8daef;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  padding: 0.75em 1.5em;
+  border: 1px solid rgba(200, 130, 190, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(200, 130, 190, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: rgba(200, 130, 190, 0.4);
+  color: #fff;
+  transform: scale(1.05);
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ------------------------- Lists ------------------------- */
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+ul li:hover {
+  color: #c882be;
+  text-shadow: 0 0 5px rgba(200, 130, 190, 0.3);
+}
+
+/* ------------------------- Table ------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.8rem;
+  border: 1px solid rgba(200, 130, 190, 0.4);
+  text-align: left;
+}
+
+th {
+  background-color: rgba(25, 15, 35, 0.85);
+  color: #ff00ff;
+}
+
+/* ------------------------- Form ------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  border: 1px solid rgba(200, 130, 190, 0.4);
+  border-radius: 5px;
+  background-color: rgba(20, 10, 30, 0.5);
+  color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #dcd6e0;
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+}
+
+/* ------------------------- Footer ------------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(25, 15, 35, 0.85);
+  color: #e8daef;
+  border-top: 1px solid rgba(200, 130, 190, 0.3);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+/* ------------------------- Responsive ------------------------- */
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

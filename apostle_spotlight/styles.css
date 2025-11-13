@@ -1,0 +1,139 @@
+/* =================================================================
+ * KEYFRAMES FOR SUBTLE LIQUID PULSE EFFECT (Border Only)
+ * Animates the border color to maintain the "liquid" feel without
+ * relying on an opaque background.
+ * ================================================================= */
+@keyframes liquid-pulse {
+    0%, 100% {
+        /* Faint base border */
+        border-color: rgba(255, 255, 255, 0.1); 
+    }
+    50% {
+        /* Brighter pulse border */
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* =================================================================
+ * GLOBAL STYLES & BACKGROUND
+ * ================================================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* CRITICAL: Ensure this background image is visible for the effect to work */
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background fixed behind the scrolling content */
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: #0d2850; 
+}
+
+/* =================================================================
+ * HEADER STYLES (Semi-transparent Glass Header)
+ * ================================================================= */
+header {
+    background-color: rgba(2, 62, 138, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* =================================================================
+ * SECTION & GRID STYLES (Ensure Transparency)
+ * ================================================================= */
+.group {
+    padding: 30px;
+    /* CRITICAL FIX: Ensure no solid background is inherited here */
+    background: transparent !important; 
+}
+
+.group h2 {
+    font-size: 1.5rem;
+    color: white; /* Legibility fix */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+.group:first-of-type .grid,
+.group:last-of-type .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* =================================================================
+ * APOSTLE CARD (EXTREME TRANSLUCENCE)
+ * ================================================================= */
+.apostle-card {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    /* CORE GLASSMOPHISM */
+    /* MAX TRANSPARENCY: NO BACKGROUND COLOR */
+    background: rgba(255, 255, 255, 0); 
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Base border color */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); 
+    
+    /* CRITICAL FROSTED EFFECT: MINIMAL BLUR */
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(3px);
+
+    /* APPLY THE LIQUID PULSE ANIMATION (BORDER ONLY) */
+    animation: liquid-pulse 8s infinite ease-in-out; 
+}
+
+/* Interactive Hover Effect */
+.apostle-card:hover {
+    animation-play-state: paused; 
+    border-color: rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5); 
+    transform: scale(1.03) translateY(-5px);
+    cursor: pointer;
+}
+
+/* =================================================================
+ * CARD CONTENT STYLES (Legibility Fixes)
+ * ================================================================= */
+.apostle-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.apostle-card h3 {
+    margin: 10px 0 5px;
+    color: #f0f0f0; /* Light text */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.apostle-card p {
+    color: #dddddd; /* Lighter text */
+    font-weight: bold;
+}

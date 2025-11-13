@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Feed Sign Up</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: rgb(120, 96, 64);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #formContainer {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 1000px; /* wider box so all 5 fit side-by-side */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #formHeader {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    #formHeader img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    #formHeader h3 {
+      color: #333;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .gender-options {
+      grid-column: 2 / 3;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    section {
+      grid-column: 1 / 3;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    button[type="submit"] {
+      background-color: rgb(120, 96, 64);
+      color: white;
+      padding: 0.8rem 1.4rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      grid-column: 1 / 3;
+    }
+
+    button[type="submit"]:hover {
+      background-color: rgb(100, 80, 50);
+    }
+
+    #closeBtn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: crimson;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #closeBtn:hover {
+      background: rgb(180, 40, 40);
+    }
+
+    /* bottom images section */
+    .bottom-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: nowrap; /* keep them in one line */
+      width: 100%;
+      overflow-x: auto; /* allow scrolling if screen too small */
+      padding: 1rem 0;
+      border-top: 2px solid #eee;
+    }
+
+    .bottom-images img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .bottom-images img:hover {
+      transform: scale(1.05);
+    }
+
+    #output {
+      color: white;
+      padding: 2rem;
+      font-size: 1rem;
+    }
+
+    /* Responsive fix for smaller screens */
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .gender-options {
+        grid-column: 1 / 2;
+      }
+
+      .bottom-images img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="formContainer">
+    <button type="button" id="closeBtn">X</button>
+
+    <div id="formHeader">
+      <img src="images/jesus_feeds_5000.jpeg" alt="Scripture Icon">
+      <h3>Sign Up for Daily Scripture Feed</h3>
+    </div>
+
+    <form id="myForm">
+      <label for="username">User Name:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label>Gender:</label>
+      <div class="gender-options">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+      </div>
+
+      <section>
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+      </section>
+
+      <section>
+        <input type="checkbox" id="conditions" name="conditions" required>
+        <label for="conditions">I acknowledge the terms and conditions</label>
+      </section>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="bottom-images">
+      <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+      <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+      <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+      <img src="images/old_testament.webp" alt="Old Testament">
+      <img src="images/new_testament.webp" alt="New Testament">
+    </div>
+  </div>
+
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("closeBtn").addEventListener("click", function () {
+      document.getElementById("formContainer").style.display = "none";
+    });
+
+    const form = document.getElementById('myForm');
+    con
+
+

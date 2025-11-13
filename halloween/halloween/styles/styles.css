@@ -1,0 +1,153 @@
+/* --- 1. Import Spooky Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Font Palette:
+  - 'Creepster': For all headings (h1, h2)
+  - 'Merriweather': For all body text (p, footer, nav)
+*/
+
+
+/* --- 2. Global & Body Styles --- */
+body {
+  /* Dark, spooky background */
+  background-color: #111111; 
+  
+  /* A readable font for paragraphs */
+  font-family: 'Merriweather', serif;
+  color: #cccccc; /* Off-white text */
+  
+  margin: 0;
+  padding: 0;
+  
+  /* You could uncomment this to add a subtle pattern! */
+  /* background-image: url('https://www.transparenttextures.com/patterns/dark-denim.png'); */
+}
+
+/* --- 3. Main Wrapper --- */
+#wrapper {
+  max-width: 900px;
+  margin: 20px auto; /* Center the page */
+  
+  /* A slightly lighter container color */
+  background-color: #1a1a1a; 
+  
+  /* A glowing orange border */
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  
+  /* A spooky glowing effect */
+  box-shadow: 0 0 25px #ff6600, 0 0 15px #ff4500 inset;
+  
+  overflow: hidden; /* Keeps rounded corners clean */
+}
+
+/* --- 4. Header & Navigation --- */
+header {
+  background-color: #000000;
+  border-bottom: 4px solid #9933ff; /* Poison purple accent */
+  padding: 10px;
+}
+
+nav ul {
+  /* Remove bullets and default padding */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+  /* Make the list horizontal */
+  display: flex;
+  justify-content: space-around; /* Evenly space the items */
+}
+
+nav li {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ff6600; /* Bright orange */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  /* Add hover effect */
+  transition: all 0.3s ease;
+  cursor: pointer; /* Makes them feel like links */
+}
+
+nav li:hover {
+  color: #9933ff; /* Purple on hover */
+  transform: scale(1.1); /* Makes it "pop" */
+  text-shadow: 0 0 10px #9933ff;
+}
+
+/* --- 5. Main Content --- */
+main {
+  padding: 20px;
+  text-align: center; /* Centers H1 and the image */
+}
+
+/* --- 6. Headings (h1, h2) --- */
+h1, h2 {
+  font-family: 'Creepster', cursive; /* Our spooky font! */
+  letter-spacing: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 6rem; /* HUGE title */
+  color: #ff6600; /* Halloween Orange */
+  
+  /* "Dripping blood" or "glowing" shadow effect */
+  text-shadow: 3px 3px 0px #000, 
+               0 0 15px #ff6600;
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: #9933ff; /* Poison Purple */
+  text-shadow: 2px 2px 0px #000;
+  
+  /* A spooky underline */
+  border-bottom: 3px dashed #444;
+  padding-bottom: 10px;
+  text-align: left; /* Align section headers to the left */
+}
+
+/* --- 7. Image Styling --- */
+img {
+  max-width: 100%; /* Makes image responsive */
+  height: auto;
+  border: 5px solid #ff6600;
+  border-radius: 8px;
+  
+  /* Add a spooky filter */
+  filter: contrast(120%) saturate(130%);
+  margin-bottom: 30px;
+}
+
+/* --- 8. Content Sections & Paragraphs --- */
+section {
+  background-color: #222; /* Darker box for content */
+  border: 1px dashed #555;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7; /* Easy to read */
+  color: #cccccc;
+  text-align: left; /* Overrides the 'text-align: center' from main */
+  font-style: italic; /* Makes the latin text look more ancient */
+}
+
+/* --- 9. Footer --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: #888; /* Dim text for the footer */
+  font-size: 0.9rem;
+  border-top: 4px solid #ff6600; /* Match the orange accent */
+  font-family: 'Merriweather', serif;
+}

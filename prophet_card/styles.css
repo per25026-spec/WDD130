@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1A2A44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #CBB26A, #BDA260);
+  border: 2px solid #F4EDE3;
+  border-radius: 14px;
+  padding: 24px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 22px rgba(0, 0, 0, 0.35);
+}
+
+.prophet-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #F4EDE3;
+}
+
+h2 {
+  margin: 10px 0;
+  color: #1A2A44;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.number {
+  font-weight: bold;
+  color: #2E2E2E;
+  margin-bottom: 10px;
+}
+
+/* ---------- BULLETED LIST ADJUSTMENT ---------- */
+.info-list {
+  list-style-type: disc;
+  padding-left: 16px;        /* moves bullets closer to text */
+  margin: 10px 0;
+  text-align: left;          /* aligns bullets nicely under the image */
+  display: inline-block;     /* keeps list centered in the card */
+}
+
+.info-list li {
+  color: #2E2E2E;
+  font-weight: 600;
+  margin: 2px 0;             /* tight vertical spacing */
+  line-height: 1.4;
+}
+
+.info-list li::marker {
+  font-size: 0.8em;
+  color: #1A2A44;            /* dark blue bullets for harmony */
+}
+/* ------------------------------------------------ */
+
+.description {
+  font-style: italic;
+  color: #2E2E2E;
+  line-height: 1.6;
+  margin-top: 12px;
+  background-color: rgba(244, 237, 227, 0.3);
+  padding: 12px;
+  border-radius: 10px;
+}

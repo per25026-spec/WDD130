@@ -1,0 +1,113 @@
+/* Site Plan Rafting - by Samir Abdel Perez Carrillo */
+
+body {
+  font-family: "IM Fell French Canon", serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  background-color: #004e64;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "IM Fell French Canon", serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  color: #007ea7;
+}
+
+img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #007ea7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffb703;
+  text-decoration: underline;
+}
+
+/* Table for color palette */
+table.colors {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.colors th, .colors td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.primary { background-color: #007ea7; }
+.secondary { background-color: #004e64; }
+.accent1 { background-color: #f4a261; }
+.accent2 { background-color: #e76f51; }
+
+/* Paragraph examples */
+p.colored {
+  background-color: #007ea7;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Sitemap styling */
+.sitemap {
+  display: grid;
+  grid-template-areas:
+    "home"
+    "page2"
+    "page3";
+  gap: 10px;
+  text-align: center;
+}
+
+.sm-home, .sm-page2, .sm-page3 {
+  background-color: #004e64;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ✅ Bullet spacing fix */
+li {
+  list-style-position: inside;
+  margin-left: 0.5rem;
+  padding-left: 0;
+}
+
+/* Optional: reduce vertical spacing in lists */
+ul, ol {
+  line-height: 1.3;
+}

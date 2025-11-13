@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Open+Sans&display=swap');
+
+:root {
+  /* Cyberpunk color palette */
+  --primary-color: #c157b7;       /* Bright magenta */
+  --secondary-color: #5a1e50;     /* Deep magenta-purple */
+  --accent1-color: #280f23;       /* Dark magenta shadow */
+  --accent2-color: #000000;       /* Black */
+
+  /* Typography */
+  --heading-font: "Oswald";
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+  /* Text colors */
+  --headline-color-on-white: #ff00ff;  
+  --headline-color-on-color: #ffffff;  
+  --paragraph-color-on-white: #e0d6ff; 
+  --paragraph-color-on-color: #ffffff; 
+  --paragraph-background-color: #280f23;
+
+  /* Navigation */
+  --nav-link-color: #ff00ff;
+  --nav-background-color: #000000;
+  --nav-hover-link-color: #000000;
+  --nav-hover-background-color: #c157b7;
+}
+
+/* === Background section added === */
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,      /* pure black top */
+    rgba(0, 0, 0, 1) 60%,     /* hold black longer */
+    rgba(40, 15, 35, 1) 75%,  /* very dark magenta starts */
+    rgba(90, 30, 80, 1) 85%,  /* deeper magenta */
+    rgba(140, 55, 120, 1) 92%,/* mid magenta */
+    rgba(193, 87, 183, 1) 100%/* bright magenta bottom */
+  );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+
+  display: flex;
+  justify-content: center; /* centers the links horizontally */
+  align-items: center;     /* vertically centers them */
+  gap: 1.5em;              /* space between links */
+  border-radius: 10px;     /* optional: gives a smoother look */
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3); /* neon glow */
+}
+
+nav a {
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  box-shadow: 0 0 15px var(--secondary-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+  text-align: center;
+}
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
